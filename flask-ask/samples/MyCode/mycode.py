@@ -18,7 +18,7 @@ d = 0
 @ask.launch
 def launch():
     speech_text = 'Welcome to the Alexa Coding, you can start saying your program now!'
-    return question(speech_text).reprompt(speech_text).simple_card('Workspace', speech_text)
+    return question(speech_text).reprompt(speech_text).simple_card('MyCode', speech_text)
 
 
 @ask.intent('AssignIntent', convert={'Variable':str, 'Value':int})
@@ -28,7 +28,7 @@ def assign(Variable, Value):
     exec(Variable + " = " + str(Value)) 
     print a 
     access()
-    return question(speech_text).reprompt(speech_text).simple_card('Workspace', speech_text)
+    return question(speech_text).reprompt(speech_text).simple_card('MyCode', speech_text)
 
 def access():
   	print "%d" % a 
@@ -38,17 +38,17 @@ def print_variable(Variable):
     exec ("temp=" + Variable )
     speech_text = Variable + " is " + str(temp) 
     print a 
-    return question(speech_text).reprompt(speech_text).simple_card('Workspace', speech_text) 
+    return question(speech_text).reprompt(speech_text).simple_card('MyCode', speech_text) 
 
 @ask.intent('SaveAndCloseIntent', convert={'FileName':str})
 def save_and_close(FileName):
 	speech_text("save the program in the file") 
-	return question(speech_text).reprompt(speech_text).simple_card('Workspace', speech_text)
+	return question(speech_text).reprompt(speech_text).simple_card('MyCode', speech_text)
 
 @ask.intent('AMAZON.HelpIntent')
 def help():
     speech_text = 'You can say a statement!'
-    return question(speech_text).reprompt(speech_text).simple_card('Workspace', speech_text)
+    return question(speech_text).reprompt(speech_text).simple_card('MyCode', speech_text)
 
 
 @ask.session_ended
