@@ -1,0 +1,4 @@
+AssignIntent assign {Value} to {Variable}
+AssignIntent assign {Variable} equal to {Value}
+PrintIntent print {Variable}
+PrintIntent what is {Variable}

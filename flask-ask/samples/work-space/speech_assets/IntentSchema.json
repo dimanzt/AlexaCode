@@ -1,0 +1,31 @@
+{
+  "intents": [
+    {
+      "intent": "AssignIntent",
+      "slots":
+	[
+	{
+		"name":"Variable",
+		"type":"Variables"
+	},
+	{
+		"name":"Value",
+		"type":"AMAZON.NUMBER"
+	}
+	]
+    },
+    {
+      "intent": "PrintIntent", 
+      "slots":
+        [
+	{
+		"name":"Variable",
+		"type":"Variables"	
+	}
+	]
+    }, 
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
